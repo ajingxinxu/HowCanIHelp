@@ -1,12 +1,70 @@
+@font-face {
+  font-family: roboto;
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: robotoi;
+  src: url("/fonts/Roboto-Italic.ttf");
+}
+
+@font-face {
+  font-family: opensans;
+  src: url("/fonts/OpenSans-Regular.ttf");
+}
+
 body {
+  font-family: roboto;
+  font-size:15px;
+  background: #E9E6D9;
+}
+
+h1 {
+  font-family: opensans;
+}
+
+.small {
+  font-size:12px;
+  font-family: robotoi;
+  color:#54494B;
+  text-align: center;
+}
+
+                    p.small {
+                      display: inline-block;
+                    }
+
+.router {
+  width: 80vw;
+  margin: 8% auto;
+}
+
+.link{
   padding: 10px;
-  font-family: sans-serif;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  border-radius:20px;
+  color: white;
+  position:absolute;
+  right:10px;
+  top:10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.orglink {
+  background: #BDD9BF;
+}
+.vollink{
+  background:#F6BD60;
 }
 
 label {
   display: block;
   padding-bottom: 20px;
+  font-family: robotoi;
+  color:#54494B
 }
+
 input {
   width:70%;
   display: block;
@@ -16,15 +74,23 @@ input {
   border-radius: 8px;
 }
 
+
+
+/* ORG */
+
 .flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .flexleft {
+  margin:auto;
   display: flex;
   flex-direction: row;
   align-items: left;
+}
+.child{
+  flex-grow:1;
 }
 
 .ov {
@@ -39,7 +105,6 @@ input.checkbox{
 label.checkbox{
   display: block;
   padding:3px 10px 0 0;
-
   font-size:10px;
 }
 .time{
@@ -54,46 +119,127 @@ label.checkbox{
   background: #BDD9BF;
   }
 
-.search {
-    width: 120px;
-    height: 35px;
-    margin: 5% 40%;
-    background: #F6BD60;
+
+
+
+/* VOL */
+.volunteerdiv {
+  padding:5% 12%;
+  min-height: 40vh;
+}
+.next {
+  border: none;
+  font-weight: 700;
+  font-size: 25px;
+  position: absolute;
+  background: none;
+  right: 0;
+  bottom:-50px;
+  cursor: pointer;
+  }
+  .back {
+    border: none;
+    color:#BDBCBD;
+    font-size: 20px;
+    position: absolute;
+    background: none;
+    left: 0;
+    margin-top:-50px;
+    cursor: pointer;
     }
-label {
-  color:#54494B;
-}
 
-.orglink{
-  padding: 10px;
-  height:30px;
-  width:50px;
-  text-decoration: none;
-  color: white;
-  background: #BDD9BF;
+
+/* 1. moneyvtime */
+.inline {
+  display: inline-block;
+  padding:20px;
+}
+label.inline{
+  width:100%;
+  height:20px;
+}
+p.inline{
+  position: absolute;
+  margin:1%;
+  padding: 0 20px;
+}
+.inline2{
   position:absolute;
-  right:0;
-  top:0;
+  right:10%;
+  margin:1%;
 }
-
-.vollink{
-  padding: 10px;
-  height:30px;
-  width:50px;
-  text-decoration: none;
-  color: white;
-  background:#F6BD60;
+.slider {
   position:absolute;
-  right:0;
-  top:50px;
+  left:15%;
+  -webkit-appearance: none;
+  width: 63%;
+  height: 25px;
+  background: #EBDEA7;
+  outline: none;
+  padding:0px;
+  border-radius: 30px;
 }
 
-.small {
-  font-size:10px;
-  color:#54494B;
-  width:80%;
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #F6BD60;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
-.volunteer {
-  margin-left:30%;
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #F6BD60;
+  box-shadow: -4px 5px 4px rgba(84, 73, 75, 0.7);
+  cursor: pointer;
 }
+
+.box {
+  position:relative;
+  min-height: 45vh;
+  padding-bottom: 0;
+}
+
+
+
+/* 2.care*/
+.ui.selection.active.dropdown{
+  border-color:#F6BD60;
+}
+.ui.selection.dropdown  {
+  background-color: rgba(0,0,0,0);
+}
+.ui.selection.active.dropdown:hover {
+  border-color:#F6BD60;
+}
+.ui.selection.dropdown:hover {
+  border-color:rgba(84, 73, 75, 0.5) ;
+}
+
+.ui.selection.active.dropdown .menu {
+  border-color:rgba(84, 73, 75, 0.5);
+  background-color: rgba(0,0,0,0);
+}
+.ui.fluid.dropdown>.dropdown.icon{
+  color:#F6BD60;
+}
+.ui.selection.dropdown .menu>.item{
+  border-color:rgba(84, 73, 75, 0.5);
+}
+
+
+
+.search {
+  width: 120px;
+  height: 35px;
+  margin: 5% 40%;
+  background: #F6BD60;
+  }
+
+
